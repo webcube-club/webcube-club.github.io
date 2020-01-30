@@ -1,6 +1,11 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial;
 }
 
 header {
@@ -11,6 +16,7 @@ header {
 
 .container {
 	width: 1170px;
+	margin: 0 auto;
 }
 
 .header_block {
@@ -19,12 +25,121 @@ header {
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	align-items: center; 
+	height: 100px;
+	justify-content: space-between;
 }
 
 .photo {
 	border-radius: 50%;
 	width: 75px;
 	height: 75px;
-	-ms-align-self: center;
-	align-self: center;
+	background: #7158e2;
 }
+
+.menu_list {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+}
+
+.menu_item {
+	height: 30px;
+	width: 100px;
+	background: #7158e2;
+	margin-right: 10px;
+}
+
+.menu_item::last-child {
+	margin-right: 0;
+}
+
+main {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.top_block {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+
+.top_block .item {
+	background: #18dcff;
+	text-align: center;
+	padding: 20px;
+	width: 47.5%;
+}
+
+.top_block .item .img {
+	width: 90%;
+
+	background: #cd84f1;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	color: #fff;
+	font-size: 70px;
+	font-family: Arial;
+	align-items: center;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+p {
+	display: block;
+	margin: 0 auto; 
+}
+
+.top_block .item .text {
+	color: #fff;
+}
+
+.bottom_block {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
+.bottom_block .item {
+	width: 30%;
+	padding: 20px;
+	text-align: center;
+	background: #18dcff;
+}
+
+.bottom_block .item .img {
+	width: 90%;
+	background: #cd84f1;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	color: #fff;
+	font-size: 70px;
+	font-family: Arial;
+	align-items: center;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.bottom_block .item .text {
+	color: #fff;
+}
+
+
