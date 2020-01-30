@@ -9,7 +9,7 @@ body {
 }
 
 header {
-	height: 100px;
+	height: 120px;
 	width: 100%;
 	background: #4b4b4b;
 }
@@ -26,7 +26,7 @@ header {
 	display: -o-flex;
 	display: flex;
 	align-items: center; 
-	height: 100px;
+	height: 120px;
 	justify-content: space-between;
 }
 
@@ -54,6 +54,12 @@ header {
 	margin-right: 10px;
 }
 
+.menu_item:hover,
+.menu_item:focus {
+	transition: 0.5s;
+	background: #18dcff;
+}
+
 .menu_item::last-child {
 	margin-right: 0;
 }
@@ -70,7 +76,7 @@ main {
 	display: -o-flex;
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 30px;
+	margin-bottom: 50px;
 }
 
 .top_block .item {
