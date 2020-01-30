@@ -1,0 +1,30 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	height: 100px;
+	width: 100%;
+	background: #4b4b4b;
+}
+
+.container {
+	width: 1170px;
+}
+
+.header_block {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.photo {
+	border-radius: 50%;
+	width: 75px;
+	height: 75px;
+	-ms-align-self: center;
+	align-self: center;
+}
