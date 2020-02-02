@@ -9,7 +9,7 @@ html {
 }
 
 .main_header {
-	background: #F03756;
+	background: #000;
 	height: 100vh;
 	width: 100%;
 }
@@ -164,3 +164,116 @@ html {
 	transition: 0.8s;
 	transition-delay: 0.3s;
 }
+.wrap {
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  position: absolute;
+  right: 250px;
+  z-index: 3;
+  top: 300px;
+}
+.cube {
+  margin: auto;
+  position: relative;
+  height: 200px;
+  width: 200px;
+  transform-style: preserve-3d;
+}
+
+.cube > div {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  border: solid 10px #fff;
+  color: #ffffff;
+  border-radius: 5px;
+  opacity: 0.9;
+}
+.front {
+  transform: translateZ(100px);
+  background: #000;
+}
+
+.back {
+   background-color: #fff;
+  transform: translateZ(-100px) rotateY(180deg);
+}
+
+.right {
+   background-color: #fff;
+  transform: rotateY(-270deg) translateX(100px);
+  transform-origin: top right;
+}
+
+.left {
+   background-color: #fff;
+  transform: rotateY(270deg) translateX(-100px);
+  transform-origin: center left;
+}
+
+.top {
+   background-color: #000;
+  transform: rotateX(-270deg) translateY(-100px);
+  transform-origin: top center;
+}
+
+.bottom {
+   background-color: #fff;
+  transform: rotateX(270deg) translateY(100px);
+  transform-origin: bottom center;
+}
+
+
+.cube {
+  animation: anim 1.5s ease-in-out infinite;
+}
+
+@keyframes anim  {
+  0% {
+    transform:rotateX(-30deg) rotateY(45deg) translateY(30px);
+  }
+  50%  {
+    transform:rotateX(-30deg) rotateY(45deg) translateY(-10px);
+  }
+  100%  {
+    transform:rotateX(-30deg) rotateY(45deg) translateY(30px);
+  }
+}
+
+
+
+
+
+.wrap:hover .front {
+  transform: translateZ(200px);
+}
+
+.wrap:hover .back {
+  transform: translateZ(-200px) rotateY(180deg);
+}
+
+.wrap:hover .right {
+  transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+}
+
+.wrap:hover .left {
+  transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+}
+
+.wrap:hover .top {
+  transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+}
+
+.wrap:hover .bottom {
+  transform: rotateX(270deg) translateZ(100px) translateY(100px);
+}
+
+
+
+
+.cube > div {
+  transition: transform 0.2s ease-in;
+}
+
