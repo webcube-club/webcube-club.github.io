@@ -9,12 +9,13 @@
 </head>
 <body>
 	<header class="main_header">
-
-			<div class="tree"></div>
+		<div class="tree"></div>
 		<div id="particles-js"></div>
 		<div id="page-wrapper">
 			<nav class="main_nav">
-				<img src="img/logo.png" alt="" class="logo">
+				<div class="logo_block">
+					<img src="img/logo.png" alt="" class="logo" data-depth="0.3">
+				</div>
 				<div class="menu">
 					<ul class="menu_list">
 						<li class="list_item"><a href="#" class="item_link">О нас</a></li>
@@ -26,14 +27,16 @@
 			</nav>
 
 			<div class="header_block">
-				<h2 class="header_title">Мы  превратим вашу<br> идею в готовый<br> продукт</h2>
-				<button class="header_button">Посмотреть портфолио</button>
+				<h2 class="header_title" data-depth="0.2">Мы  превратим вашу<br> идею в готовый<br> продукт</h2>
+				
 			</div>
+			<button class="header_button">Посмотреть портфолио</button>
 		</div>
 	</header>
 
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js" defer></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" defer></script>
 	<script src="script.js" defer></script>
 </body>

@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+html {
+	overflow-x: hidden;
+}
+
 .main_header {
 	background: #F03756;
 	height: 100vh;
@@ -27,6 +31,10 @@
 	padding-left: 50px;
 }
 
+.logo_block {
+	position: relative !important;
+}
+
 .main_nav {
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -38,6 +46,10 @@
 	margin-bottom: 220px;
 }
 
+.menu {
+	position: relative !important;
+}	
+
 .menu_list {
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -46,7 +58,6 @@
 	display: flex;
 	list-style: none;
 }
-
 .list_item {
 	margin-right: 50px;
 }
@@ -60,6 +71,23 @@
 	color: #fff;
 	font-size: 25px;
 	text-decoration: none;
+	position: relative;
+}
+
+.item_link::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0%;
+	height: 1px;
+	background: #fff;
+}
+
+.item_link:hover::before,
+.item_link:focus::before{
+	width: 100%;
+	transition: 0.7s;
 }
 
 .tree {
@@ -76,6 +104,8 @@
 	color: #fff;
 	font-size: 50px;
 	margin-bottom: 230px;
+	display: block;
+	position: relative;
 }
 
 .header_button {
@@ -88,7 +118,33 @@
 	font-family: 'Roboto';
 	color: #fff;
 	font-size: 20px;
+	display: block;
 	position: relative;
+}
+
+.header_button:hover,
+.header_button:focus {
+	color: #000;
+	transition: 0.8s;
+	transition-delay: 0.3s;
+}
+
+.header_button:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0;
+	top: 0;
+	background: #fff;
+	z-index:-1;
+}
+
+.header_button:hover::before,
+.header_button:focus::before {
+	width: 100%;
+	height: 100%;
+	transition: 0.5s;
 }
 
 .header_button:after {
@@ -99,4 +155,12 @@
 	position: absolute;
 	right: 30px;
 	top: 17px;
+}
+
+
+.header_button:hover::after,
+.header_button:focus::after {
+	filter: invert(1);
+	transition: 0.8s;
+	transition-delay: 0.3s;
 }
