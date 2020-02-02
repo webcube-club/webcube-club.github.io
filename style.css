@@ -8,10 +8,71 @@ html {
 	overflow-x: hidden;
 }
 
+.color_theme {
+	display: block;
+	position: fixed;
+	right: 20px;
+	z-index: 3;
+	bottom: 20px;
+}
+
+.color_theme_checkbox {
+	display: none;
+}
+
+.color_theme_slider {
+	display: block;
+	width: 80px;
+	height: 40px;
+	border-radius: 30px;
+	background-color: #3c4145;
+	border: 5px solid #1c1c1c;
+	position: relative;
+	box-sizing: border-box;
+	transition: 0.5s;
+}
+
+.color_theme_slider::before {
+	content: "";
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: #fff;
+	position: absolute;
+	border: 5px solid #e3e3c7;
+	box-sizing: border-box;
+	transform: translateX(0px);
+	transition: 0.5s;
+}
+
+.color_theme_checkbox:checked + .color_theme_slider::before {
+	transform: translateX(40px);
+	background: #ffdf6d;
+	border: 5px solid #e1c348;
+	transition: 0.5s;
+}
+
+.color_theme_checkbox:checked + .color_theme_slider {
+	transition: 0.5s;
+	background-color: #9ee3fb;
+	border: 5px solid #86c3d7;
+}
+
+
 .main_header {
 	background: #000;
 	height: 100vh;
 	width: 100%;
+}
+
+.light_theme {
+	background: #F03756 !important;
+	transition: 1s;
+}
+
+.dark_theme {
+	background: #000 !important;
+	transition: 1s;
 }
 
 #particles-js {

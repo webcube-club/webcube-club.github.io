@@ -117,3 +117,24 @@ var parallaxInstance = new Parallax(scene);
 
 var scene2 = $('.logo_block').get(0);
 var parallaxInstance = new Parallax(scene2);
+
+
+// var color_theme = document.querySelector('color_theme_checkbox'); 
+// var header = document.querySelector('main_header');   
+
+// if (color_theme.checked) {
+//     header.classList.addClass('light_theme');
+// }
+
+$(function() {
+$( ".color_theme_checkbox" ).on( "click", function() {
+            if($(this).is(":checked")) {
+            	$('.dark_theme').addClass('light_theme');
+            	$('.light_theme').removeClass('dark_theme');
+            }
+   			else {
+            	$('.light_theme').addClass('dark_theme');
+            	$('.dark_theme').removeClass('light_theme');
+   			}
+})
+});
