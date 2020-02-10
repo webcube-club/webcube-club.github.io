@@ -50,13 +50,13 @@ html {
 .settings {
 	position: fixed;
 	z-index: 99;
-	width: 30%;
+	width: 90%;
 	height: 300px;
 	top: 200px;
-	left: 35%;
+	left: 5%;
 	background: #D8BF25;
 	border-radius: 20px;
-	padding: 35px;
+	padding: 20px;
 }
 
 .settings_item {
@@ -68,12 +68,12 @@ html {
 	justify-content: space-between;
 	-ms-align-items: center;
 	align-items: center;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .settings_item_title {
 	color: #fff;
-	font-size: 20px;
+	font-size: 15px;
 	font-family: 'Roboto';
 }
 
@@ -112,7 +112,7 @@ html {
 
 .color_theme {
 	display: block;
-	width: 80px;
+	width: 60px;
 }
 
 .color_theme_checkbox {
@@ -121,8 +121,8 @@ html {
 
 .color_theme_slider {
 	display: block;
-	width: 80px;
-	height: 40px;
+	width: 60px;
+	height: 30px;
 	border-radius: 30px;
 	background-color: #fff;
 	position: relative;
@@ -132,8 +132,8 @@ html {
 
 .color_theme_slider::before {
 	content: "";
-	width: 30px;
-	height: 30px;
+	width: 20px;
+	height: 20px;
 	border-radius: 50%;
 	background: #3c4145;
 	position: absolute;
@@ -145,7 +145,7 @@ html {
 }
 
 .color_theme_checkbox:checked + .color_theme_slider::before {
-	transform: translateX(40px);
+	transform: translateX(30px);
 	background: #fff;
 	transition: 0.5s;
 }
@@ -167,14 +167,14 @@ html {
 
 .languages {
 	display: flex;
-	width: 150px;
+	width: 100px;
 	justify-content: space-between;
 }
 
 .language {
 	display: block;
-	width: 40px;	
-	height: 40px;
+	width: 30px;	
+	height: 30px;
 	border-radius: 50%;
 	border: none;
 	font-size: 0;
