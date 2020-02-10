@@ -213,6 +213,10 @@ html {
 }
 
 @media (min-width: 320px){
+
+html {
+	overflow-x: hidden;
+}
 	body {
 		width: 100%;
 	}
@@ -358,7 +362,7 @@ html {
 	.header_title {
 		font-family: 'Rubik Mono One', sans-serif;
 		color: #fff;
-		font-size: 50px;
+		font-size: 45px;
 		position: relative;
 		text-align: center;
 		margin-bottom: 50px;
