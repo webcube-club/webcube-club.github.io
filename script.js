@@ -226,22 +226,31 @@ function translate(obj) {
 $('#rus').on('click', function() {
 	translate(toRus);
 	$('#rus').attr('disabled', 'disabled');
+	$('#rus').css('border', '2px solid #fff');
 	$('#ukr').removeAttr("disabled");
+	$('#ukr').css('border', 'none');
 	$('#eng').removeAttr("disabled");
+	$('#eng').css('border', 'none');
 });
 
 $('#ukr').on('click', function() {
 	translate(toUkr);
 	$('#ukr').attr('disabled', 'disabled');
+	$('#ukr').css('border', '2px solid #fff');
 	$('#rus').removeAttr("disabled");
+	$('#rus').css('border', 'none');
 	$('#eng').removeAttr("disabled");
+	$('#eng').css('border', 'none');
 });
 
 $('#eng').on('click', function() {
 	translate(toEng);
 	$('#eng').attr('disabled', 'disabled');
+	$('#eng').css('border', '2px solid #fff');
 	$('#ukr').removeAttr("disabled");
+	$('#ukr').css('border', 'none');
 	$('#rus').removeAttr("disabled");
+	$('#rus').css('border', 'none');
 });
 
 

@@ -184,6 +184,7 @@ html {
 	background: url('img/russia.png') no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
+	border: 2px solid #fff;
 }
 
 #eng {
