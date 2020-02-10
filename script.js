@@ -1,8 +1,8 @@
-$(document).ready(function(){
+	$(document).ready(function(){
 		particlesJS("particles-js", {
 	  "particles": {
 	    "number": {
-	      "value": 90,
+	      "value": 60,
 	      "density": {
 	        "enable": true,
 	        "value_area": 800
@@ -137,4 +137,135 @@ $( ".color_theme_checkbox" ).on( "click", function() {
             	$('.dark_theme').removeClass('light_theme');
    			}
 })
+});
+
+$('.settings_button').on("click", function() {
+	$('.settings').removeClass('hidden');
+	$('.settings').addClass('visible');
+	$('.settings_bg').removeClass('hidden');
+});
+
+$('.settings_close').on("click", function() {
+	$('.settings').addClass('hidden');
+	$('.settings').removeClass('visible');
+	$('.settings_bg').addClass('hidden');
+});
+
+
+// var languageURL = 'word.json';
+// var language = new XMLHttpRequest();
+// var words;
+// language.open('GET', languageURL);
+// words = language.response;
+// language.onload = function() {
+// 	// translateToRussia(words);
+// 	translateToBritain(words);
+// }
+
+// function translateToBritain(obj) {
+// 	var container = document.querySelector('.menu_list');
+// 	var allElements = Array.from(document.querySelectorAll(".translate"));
+// 	allElements[1].html(obj[allElements[1].text]);
+// 	console.log(allElements);
+// }  
+
+
+// 	translateToBritain(words);
+
+var toEng = {
+	"О нас": "About me",
+	"Портфолио": "Portfolio",
+	"Калькулятор цен": "Price Calculate",
+	"Контакты": "Contacts",
+	"Мы превратим вашу идею в готовый продукт": "We will turn yours idea in ready product",
+	"Посмотреть портфолио": "Check Portfolio",
+	"Про нас": "About me",
+	"Портфоліо": "Portfolio",
+	"Калькулятор Цін": "Price Calculate",
+	"Контакти": "Contacts",
+	"Ми перетворимо вашу ідею в готовий продукт": "We will turn yours idea in ready product",
+	"Подивитись Портфоліо": "Check Portfolio"
+}
+
+var toRus = {
+	"About me": "О нас",
+	"Portfolio": "Портфолио",
+	"Price Calculate": "Калькулятор цен",
+	"Contacts": "Контакты",
+	"We will turn yours idea in ready product": "Мы превратим вашу идею в готовый продукт",
+	"Check Portfolio": "Посмотреть портфолио",
+	"Про нас": "О нас",
+	"Портфоліо": "Портфолио",
+	"Калькулятор Цін": "Калькулятор цен",
+	"Контакти": "Контакты",
+	"Ми перетворимо вашу ідею в готовий продукт": "Мы превратим вашу идею в готовый продукт",
+	"Подивитись Портфоліо": "Посмотреть портфолио"
+}
+
+var toUkr = {
+	"О нас": "Про нас",
+	"Портфолио": "Портфоліо",
+	"Калькулятор цен": "Калькулятор Цін",
+	"Контакты": "Контакти",
+	"Мы превратим вашу идею в готовый продукт": "Ми перетворимо вашу ідею в готовий продукт",
+	"Посмотреть портфолио": "Подивитись Портфоліо",
+	"About me": "Про нас",
+	"Portfolio": "Портфоліо",
+	"Price Calculate": "Калькулятор Цін",
+	"Contacts": "Контакти",
+	"We will turn yours idea in ready product": "Ми перетворимо вашу ідею в готовий продукт",
+	"Check Portfolio": "Подивитись Портфоліо",
+}
+var allElements = Array.from(document.querySelectorAll(".translate"));	
+function translate(obj) {
+	for(var i = 0; i < allElements.length; i++) { 
+		allElements[i].innerHTML = obj[allElements[i].innerHTML];
+	}		
+}
+
+$('#rus').on('click', function() {
+	translate(toRus);
+	$('#rus').attr('disabled', 'disabled');
+	$('#ukr').removeAttr("disabled");
+	$('#eng').removeAttr("disabled");
+});
+
+$('#ukr').on('click', function() {
+	translate(toUkr);
+	$('#ukr').attr('disabled', 'disabled');
+	$('#rus').removeAttr("disabled");
+	$('#eng').removeAttr("disabled");
+});
+
+$('#eng').on('click', function() {
+	translate(toEng);
+	$('#eng').attr('disabled', 'disabled');
+	$('#ukr').removeAttr("disabled");
+	$('#rus').removeAttr("disabled");
+});
+
+
+
+
+
+
+function adaptive() {
+    if(device.mobile() || device.tablet())
+    {   
+        $('#particles-js').remove();
+	} else {
+		$('.main_header').append('<divid="particles-js"></div')
+	}
+}
+
+adaptive();
+
+$('.menu_toggle').on('click', function() {
+		$('.menu_list').toggle();
+		$('.mobile_menu_bg').toggle();
+		if($('.menu_toggle').hasClass('toggle_active')) {
+			$('.menu_toggle').removeClass('toggle_active');
+		} else {
+			$('.menu_toggle').addClass('toggle_active');
+		}
 });

@@ -8,61 +8,112 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Rubik+Mono+One&display=swap&subset=cyrillic" rel="stylesheet">
 </head>
 <body>
-	<label class="color_theme">
-  		<input type="checkbox" class="color_theme_checkbox">
-  		<span class="color_theme_slider"></span>
-	</label>
+	<button class="settings_button">Настройки</button>
+	<div class="settings_bg hidden"></div>
+	<div class="settings hidden">
+		<div class="settings_item">
+			<p class="settings_item_title">Цветовая тема: </p>
+			<label class="color_theme">
+		  		<input type="checkbox" class="color_theme_checkbox">
+		  		<span class="color_theme_slider"></span>
+			</label>
+		</div>
+		<div class="settings_item">
+			<p class="settings_item_title">Язык: </p>
+			<div class="languages">
+		  		<button class="language" id="eng">English</button>
+		  		<button class="language" id="rus">Русский</button>
+		  		<button class="language" id="ukr">Українська</button>
+			</div>
+		</div>
+		<button class="popup_close settings_close">Закрыть</button>
+	</div>
 	<header class="main_header dark_theme">
-		<div class="wrap">
-  <div class="cube">
-    <div class="front dark_theme">
-   
-    </div>
-    <div class="back">
-
-    </div>
-    <div class="top dark_theme">
-
-    </div>
-    <div class="bottom">
-      
-    </div>
-    <div class="left">
-  
-    </div>
-    <div class="right">
-     
-    </div>
-  </div>
-</div>
 		<div id="particles-js"></div>
-		<div id="page-wrapper">
-			<nav class="main_nav">
-				<div class="logo_block">
-					<img src="img/logo.png" alt="" class="logo" data-depth="0.3">
+		<div id="main_page">
+			<div class="wrap">
+	  			<div class="cube">
+				    <div class="front dark_theme">
+				   
+				    </div>
+				    <div class="back">
+
+				    </div>
+				    <div class="top dark_theme">
+
+				    </div>
+				    <div class="bottom">
+				      
+				    </div>
+				    <div class="left">
+				  
+				    </div>
+				    <div class="right">
+				     
+				    </div>
 				</div>
+			</div>
+			<nav class="main_nav">	
+					<div class="logo_block">
+						<img src="img/logo.png" alt="" class="logo" data-depth="0.3">
+					</div>
 				<div class="menu">
+					<button class="menu_toggle"><div></div></button>
+					<div class="mobile_menu_bg"></div>
 					<ul class="menu_list">
-						<li class="list_item"><a href="#" class="item_link">О нас</a></li>
-						<li class="list_item"><a href="#" class="item_link">Портфолио</a></li>
-						<li class="list_item"><a href="#" class="item_link">Калькулятор Цен</a></li>
-						<li class="list_item"><a href="#" class="item_link">Контакты</a></li>
+						<li class="list_item"><a href="#" class="item_link translate">О нас</a></li>
+						<li class="list_item"><a href="#" class="item_link translate">Портфолио</a></li>
+						<li class="list_item"><a href="#" class="item_link translate">Калькулятор цен</a></li>
+						<li class="list_item"><a href="#" class="item_link translate">Контакты</a></li>
 					</ul>
 				</div>
 			</nav>
 
 			<div class="header_block">
-				<h2 class="header_title" data-depth="0.2">Мы  превратим вашу<br> идею в готовый<br> продукт</h2>
+				<h2 class="header_title" data-depth="0.2"><p class="translate">Мы превратим вашу идею в готовый продукт</p></h2>
 				
 			</div>
-			<button class="header_button">Посмотреть портфолио</button>
+			<button class="header_button translate">Посмотреть портфолио</button>
 		</div>
 	</header>
+		<main class="main_content">
+			<section class="about_me">
+				<div class="about_me_header"><h2 class="about_me_header_title">Обо мне</h2></div>
+				<div class="about_me_info_block">
 
+					<div class="about_me_right_block">
+						<h3 class="about_me_info_title">Обо мне</h3>
+						<p class="about_me_info_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eius qui soluta, velit totam blanditiis quibusdam doloribus! Libero quidem tempore consequuntur tenetur, neque temporibus exercitationem ipsam recusandae. Cum nulla, perferendis!</p>
+						<button class="about_me_btn">Написать мне</button>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="main_footer" style="display: none;">
+			<h2 class="contacts_title">Контакты</h2>
+
+			<div class="contacts_block">
+					<ul class="social_list">
+						<li class="social_list_item"><a class="social_list_item_link">
+								<img src="img/social/email_focus.png" alt="" class="social_list_item_img">
+								<p class="social_list_item_text">vano1612shely@gmail.com</p>
+							</a></li>
+						<li class="social_list_item"><a href="https://instagram.com/_vano_16_" class="social_list_item_link">
+								<img src="img/social/instagram_focus.png" alt="" class="social_list_item_img">
+								<p class="social_list_item_text">@_vano_16_</p>
+							</a></li>
+						<li class="social_list_item"><a href="https://www.t.me/ivanshely" class="social_list_item_link">
+								<img src="img/social/telegram_focus.png" alt="" class="social_list_item_img">
+								<p class="social_list_item_text">@ivanshely</p>
+							</a></li>
+					</ul>
+			</div>
+		</footer>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js" defer></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" defer></script>
+	<script src="js/device.js"></script>
 	<script src="script.js" defer></script>
 </body>
 </html>
