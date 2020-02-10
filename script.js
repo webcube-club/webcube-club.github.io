@@ -5,7 +5,7 @@
 	      "value": 60,
 	      "density": {
 	        "enable": true,
-	        "value_area": 800
+	        "value_area": 1000
 	      }
 	    },
 	    "color": {
@@ -252,7 +252,7 @@ $('#eng').on('click', function() {
 function adaptive() {
     if(device.mobile() || device.tablet())
     {   
-        $('#particles-js').remove();
+        //$('#particles-js').remove();
 	} else {
 		$('.main_header').append('<divid="particles-js"></div')
 	}
