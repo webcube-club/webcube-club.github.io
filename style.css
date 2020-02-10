@@ -20,8 +20,8 @@ html {
 
 @keyframes open{
 	0%{top: -1000px;}
-	80%{top: 220px;}
-	100%{top: 200px;}
+	80%{top: calc(50% - 80px);}
+	100%{top: calc(50% - 100px);}
 }
 
 .settings_button {
@@ -52,7 +52,7 @@ html {
 	z-index: 99;
 	width: 90%;
 	height: 200px;
-	top: 200px;
+	top: calc(50% - 100px);
 	left: 5%;
 	background: #D8BF25;
 	border-radius: 20px;
@@ -419,10 +419,15 @@ html {
 /*------PC------*/
 
 @media screen and (min-width: 1360px) {
+	@keyframes open{
+		0%{top: -1000px;}
+		80%{top: calc(50% - 120px);}
+		100%{top: calc(50% - 150px);}
+	}
 	.settings {
 		width: 30%;
 		height: 300px;
-		top: 200px;
+		top: calc( 50% - 150px );
 		left: 35%;
 		padding: 35px;
 	}
