@@ -243,8 +243,8 @@ html {
 
 	.menu_toggle {
 		display: block;
-		width: 50px;
-		height: 30px;
+		width: 100px;
+		height: 80px;
 		border: 0;
 		background: none;
 		position: absolute;
