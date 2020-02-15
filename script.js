@@ -151,27 +151,6 @@ $('.settings_close').on("click", function() {
 	$('.settings_bg').addClass('hidden');
 });
 
-
-// var languageURL = 'word.json';
-// var language = new XMLHttpRequest();
-// var words;
-// language.open('GET', languageURL);
-// words = language.response;
-// language.onload = function() {
-// 	// translateToRussia(words);
-// 	translateToBritain(words);
-// }
-
-// function translateToBritain(obj) {
-// 	var container = document.querySelector('.menu_list');
-// 	var allElements = Array.from(document.querySelectorAll(".translate"));
-// 	allElements[1].html(obj[allElements[1].text]);
-// 	console.log(allElements);
-// }  
-
-
-// 	translateToBritain(words);
-
 var toEng = {
 	"О нас": "About me",
 	"Портфолио": "Portfolio",
@@ -258,7 +237,7 @@ $('#eng').on('click', function() {
 
 
 
-function adaptive() {
+/*function adaptive() {
     if(device.mobile() || device.tablet())
     {   
         //$('#particles-js').remove();
@@ -266,8 +245,7 @@ function adaptive() {
 		$('.main_header').append('<divid="particles-js"></div')
 	}
 }
-
-adaptive();
+adaptive();*/
 
 $('.menu_toggle').on('click', function() {
 		$('.menu_list').toggle();
