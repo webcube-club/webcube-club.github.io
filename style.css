@@ -34,7 +34,6 @@ html {
 	border: none;
 	background: url('img/settings.png') no-repeat;
 	background-size: cover;
-	filter: invert();
 	font-size: 0;
 	z-index: 3;
 }
